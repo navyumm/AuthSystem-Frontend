@@ -8,7 +8,7 @@ import { Toaster } from 'react-hot-toast'
 import { Route, Routes } from 'react-router-dom';
 import AuthLayout from "./components/AuthLayout"
 import Login from './components/Login'
-import SignUp from './components/SignUp'
+import Signup from './components/Signup'
 import LayoutPage from './pages/Layout'
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
       <Route path="/" element={<AuthLayout authentication={false}> <LayoutPage /> </AuthLayout>} />
       <Route path="/home" element={<AuthLayout authentication> <HomePage /> </AuthLayout>} />
       <Route path="/login" element={<AuthLayout authentication={false}> <Login /> </AuthLayout>} />
-      <Route path="/signup" element={<AuthLayout authentication={false}> <SignUp /> </AuthLayout>} />
+      <Route path="/signup" element={<AuthLayout authentication={false}> <Signup /> </AuthLayout>} />
 
     </Routes>
 

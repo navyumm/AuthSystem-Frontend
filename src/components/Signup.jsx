@@ -6,7 +6,7 @@ import { createAccount, userLogin } from "../redux/authSlice";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
-function SignUp() {
+function Signup() {
   const {
     handleSubmit,
     register,
@@ -130,4 +130,4 @@ function SignUp() {
   );
 }
 
-export default SignUp;
+export default Signup;
