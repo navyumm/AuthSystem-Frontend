@@ -67,6 +67,10 @@ function HomePage() {
     );
   };
 
+  function showAlert() {
+    window.alert("Under development !!");
+  }
+
   return (
     <div className="min-h-screen bg-gray-100 p-5">
       <header className="flex justify-between items-center p-4 bg-white shadow-md">
@@ -77,7 +81,7 @@ function HomePage() {
         {/* Change Password and Logout Buttons */}
         <div className="space-x-4">
           <button
-            onClick={() => alert("under development")} 
+            onClick={showAlert} 
             className="bg-yellow-500 text-white px-4 py-2 rounded-lg"
           >
             Change Password
