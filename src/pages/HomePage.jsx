@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { userLogout } from "../redux/authSlice"; 
+import { userLogout } from "../redux/authSlice";
 
 const products = [
   { id: 1, name: "Product 1", price: 10 },
@@ -16,10 +16,10 @@ function HomePage() {
 
   // Function to handle logout
   const handleLogout = () => {
-    dispatch(userLogout()); 
-    navigate("/"); 
+    dispatch(userLogout());
+    navigate("/");
   };
-  
+
   const addToCart = (product) => {
     setCart((prevCart) => {
       const currentQuantity = prevCart[product.id]?.quantity || 0;
@@ -58,7 +58,7 @@ function HomePage() {
     return cart[productId]?.quantity || 0;
   };
 
-  
+
   // Function to calculate the total price of items in the cart
   const getTotalPrice = () => {
     return Object.values(cart).reduce(
@@ -76,11 +76,14 @@ function HomePage() {
 
         {/* Change Password and Logout Buttons */}
         <div className="space-x-4">
-          <button className="bg-yellow-500 text-white px-4 py-2 rounded-lg">
+          <button
+            onClick={() => alert("under development")} 
+            className="bg-yellow-500 text-white px-4 py-2 rounded-lg"
+          >
             Change Password
           </button>
           <button
-            onClick={handleLogout} // Correctly passing a function reference
+            onClick={handleLogout}
             className="bg-red-500 text-white px-4 py-2 rounded-lg"
           >
             Logout
