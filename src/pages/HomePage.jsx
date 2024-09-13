@@ -52,12 +52,10 @@ function HomePage() {
     return Object.values(cart).reduce((sum, item) => sum + item.quantity, 0);
   };
 
-
   // Function to check if the product is in the cart
   const getProductQuantity = (productId) => {
     return cart[productId]?.quantity || 0;
   };
-
 
   // Function to calculate the total price of items in the cart
   const getTotalPrice = () => {
@@ -81,7 +79,7 @@ function HomePage() {
         {/* Change Password and Logout Buttons */}
         <div className="space-x-4">
           <button
-            onClick={showAlert} 
+            onClick={showAlert}
             className="bg-yellow-500 text-white px-4 py-2 rounded-lg"
           >
             Change Password
@@ -100,7 +98,7 @@ function HomePage() {
         <h2 className="text-2xl font-semibold mb-5">Products</h2>
 
         {/* Static Products List */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full max-w-5xl">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 w-full max-w-5xl">
           {products.map((product) => (
             <div
               key={product.id}
